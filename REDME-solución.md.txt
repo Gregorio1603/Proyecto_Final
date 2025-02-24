@@ -1,0 +1,4 @@
+Para este problema debemos de crear un código donde se puede hacer 
+muchas cotizaciones dependiendo del usuario cuando el usuario ya no quiera hacer mas cotizaciones 
+podrá darle fin al código 
+

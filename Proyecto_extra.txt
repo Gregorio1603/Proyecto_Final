@@ -1,0 +1,41 @@
+var seguro_base = 2000;
+var total=0;
+var continuar = true;
+
+var recargo_propiedades = 0.35; // Recargo por propiedad
+var recargo_salario = 0.05; // Recargo por salario
+
+while (continuar) {
+    var nombre = prompt("Ingrese su nombre, por favor:");
+
+    var propiedades = prompt("Ingresa cuántas propiedades tienes:");
+    var propiedades_numero = parseInt(propiedades); 
+
+    var salario = prompt("Ingresa cuál es tu salario:");
+    var salario_numero = parseInt(salario); 
+    total = seguro_base; 
+    
+    //recargos por la cantidad de terrenos
+    if (propiedades_numero >= 1 && propiedades_numero <= 5) {
+        total += seguro_base * recargo_propiedades * propiedades_numero;
+    } else if (propiedades_numero >= 6 && propiedades_numero <= 10) {
+        total += seguro_base * recargo_propiedades * propiedades_numero;
+    } else if (propiedades_numero >= 11 && propiedades_numero <= 15) {
+        total += seguro_base * recargo_propiedades * propiedades_numero;
+    }
+
+    // Agregar recargos por salario
+    if (salario_numero >= 1000) {
+        total += seguro_base * recargo_salario * salario_numero;
+    }
+
+    var recargo_total = total - seguro_base;
+
+    alert("Para el asegurado " + nombre);// devolvemos el nombre del usuario
+    alert("El recargo total de las propiedades será de: Q." + recargo_total);// le daremos el total de los recargos de los terrenos
+    alert("El precio final a cancelar será de: Q." + total);// le daremos al usuario el total a cancelar
+
+    continuar = confirm("¿Seguir cotizando?");
+}
+
+alert("Vuelva pronto"); // nos despedimos del usuario

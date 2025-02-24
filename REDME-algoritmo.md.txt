@@ -1,0 +1,7 @@
+1. identificar cual es lo que debemos de analizar
+2. solicitarle al usuario su nombre
+3. solicitarle cuantas propiedades tiene
+4. solicitarle cual es su salario
+5. se devolverá al usuario el total de recargos por los terrenos y por el salario
+6. se devolverá el total a cancelar dependiendo de cuantas propiedades tiene el usuario
+7. nos despedimos del usuario
